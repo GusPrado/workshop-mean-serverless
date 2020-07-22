@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class FuncionarioService {
 
   // ==> Uri da api (Back-End)
-  uri = 'http://localhost:8000/api';
+  // uri = 'http://localhost:8000/api'; <-- local API
+  uri = 'http://localhost:7071/api'; //Azure function API
 
   constructor(private http: HttpClient) { }
 
